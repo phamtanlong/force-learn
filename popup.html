@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>QuizWord</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 2px 2px 2px 2px;
+            padding: 0px;
+            background: white;
+        }
+        .mytit {
+            font-family: sans-serif;
+            font-size: 18pt;
+            text-align: center;
+            margin: 4px 12px 4px 12px;
+        }
+        .mybut {
+            font-family: sans-serif;
+            font-size: 14pt;
+            text-align: center;
+            cursor: pointer;
+            background: white;
+            border: 1px solid black;
+            color: black;
+            /*trbl*/
+            margin: 0px 12px 6px 12px;
+            padding: 2px 6px 2px 6px;
+            border-radius: 4px;
+        }
+        .mybut:hover {
+            background: #c2d6d6;
+        }
+    </style>
+    <script src="blacklist.js"></script>
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <div class="mytit">QuizWord</div>
+    <div class="mybut" id="btnVocabulary">Lesson</div>
+    <div class="mybut" id="btnOptions">Options</div>
+    <div class="mybut" id="btnBlackList">Black This</div>
+    <div class="mybut" style="background: #ffff80;" id="btnStop1Min">Stop1Min!</div>
+    <div class="mybut" id="btnVisitUs">VisitUs</div>
+    <div style="display:none;" class="mybut" id="btnExtension">Extension</div>
+</body>
+
+</html>

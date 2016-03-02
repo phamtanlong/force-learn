@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Options</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .form-style-1 {
+            margin:10px auto;
+            max-width: 700px;
+            padding: 4px 12px 10px 20px;
+            font: 18px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+        .form-style-1 li {
+            padding: 0;
+            display: block;
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+        .form-style-1 label{
+            margin:0 0 3px 0;
+            padding:0px;
+            display:block;
+            font-weight: bold;
+        }
+        .form-style-1 input[type=text], 
+        .form-style-1 input[type=date],
+        .form-style-1 input[type=datetime],
+        .form-style-1 input[type=number],
+        .form-style-1 input[type=search],
+        .form-style-1 input[type=time],
+        .form-style-1 input[type=url],
+        .form-style-1 input[type=email],
+        textarea, 
+        select{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border:1px solid #BEBEBE;
+            padding: 7px;
+            margin:0px;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;  
+        }
+        .form-style-1 input[type=text]:focus, 
+        .form-style-1 input[type=date]:focus,
+        .form-style-1 input[type=datetime]:focus,
+        .form-style-1 input[type=number]:focus,
+        .form-style-1 input[type=search]:focus,
+        .form-style-1 input[type=time]:focus,
+        .form-style-1 input[type=url]:focus,
+        .form-style-1 input[type=email]:focus,
+        .form-style-1 textarea:focus, 
+        .form-style-1 select:focus{
+            -moz-box-shadow: 0 0 8px #88D5E9;
+            -webkit-box-shadow: 0 0 8px #88D5E9;
+            box-shadow: 0 0 8px #88D5E9;
+            border: 1px solid #88D5E9;
+        }
+        .form-style-1 .field-divided{
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .form-style-1 .field-long{
+            width: 100%;
+        }
+        .form-style-1 .field-select{
+            width: 100%;
+            font-size: 18px;
+        }
+        .form-style-1 .field-textarea{
+            height: 300px;
+            font-size: 18px;   
+        }
+        .form-style-1 input[type=submit], .form-style-1 input[type=button]{
+            background: #4B99AD;
+            padding: 8px 15px 8px 15px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+        }
+        .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+            background: #4691A4;
+            box-shadow:none;
+            -moz-box-shadow:none;
+            -webkit-box-shadow:none;
+        }
+        .form-style-1 .required{
+            color:red;
+        }
+        .clearall {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .myfield {
+            font-size: 18px;
+        }
+        .mydiv {
+            position:absolute;
+            width: 800px;
+            height: 700px;
+            top:0%;
+            left:30%;
+            margin:10px 0 0 -150px;
+            border: 2px solid #ddd;
+        }
+        input[type='checkbox'] {
+            -webkit-appearance:none;
+            width:20px;
+            height:20px;
+            background:white;
+            border-radius:5px;
+            border:2px solid #0099ff;
+        }
+        input[type='checkbox']:checked {
+            background: #e64d00;
+        }
+        .container { border:2px solid #ccc; width:690px; height: 250px; overflow-y: scroll; }
+    </style>
+</head>
+
+<body>
+    <!-- <form> -->
+    <div class="mydiv">
+        <ul class="form-style-1">
+            <li>
+                <label>1. Number of question in 1 quiz</label>
+                <input type="number" id="num_quest" class="myfield" />
+            </li>
+            <li>
+                <label>2. Break time between quize (minute)</label>
+                <input type="number" id="break_time" class="myfield" />
+            </li>
+            <li>
+                <input id="checkbox-read" class="checkbox-custom" name="checkbox-read" type="checkbox" checked>Read Text
+            </li>
+            <li>
+                <input id="checkbox-noise" class="checkbox-custom" name="checkbox-noise" type="checkbox" checked>Make noise to notify you back!
+            </li>
+            <li>
+                <input id="checkbox-vietnam-sign" class="checkbox-custom" name="checkbox-vietnam-sign" type="checkbox" checked>Không kiểm tra dấu tiếng Việt (nhanh)
+            </li>
+            <li>
+                <label>3. Black list pages</label>
+                <div class="container" id="black_list">
+                </div>
+            </li>
+            <br>
+            <li>
+                <input type="button" id="btn_save" value="Save"/>
+            </li>
+        </ul>
+    </div>
+    <!-- </form> -->
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="blacklist.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+</body>
+</html>
